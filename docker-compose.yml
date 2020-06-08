@@ -7,6 +7,7 @@ services:
     tomcat:
         build: ./tomcat
         image: tomcat
+        container_name: tomcat
         ports: 
             - 5000:8080
         volumes: 
