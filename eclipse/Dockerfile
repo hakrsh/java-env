@@ -1,7 +1,7 @@
 FROM java/env
 
-RUN wget http://mirrors.neusoft.edu.cn/eclipse/technology/epp/downloads/release/2020-03/Reclipse-java-2020-03-R-linux-gtk-x86_64.tar.gz -O ./eclipse.tar.gz  && \
-	tar xzf eclipse.tar.gz && rm eclipse.tar.gz
+RUN wget http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/oxygen/2/eclipse-jee-oxygen-2-linux-gtk-x86_64.tar.gz -O ./eclipse.tar.gz  && \
+	tar xzvf eclipse.tar.gz && rm eclipse.tar.gz
 
 RUN export uid=1000 gid=1000 
 RUN mkdir -p /home/developer
