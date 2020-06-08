@@ -14,4 +14,3 @@ RUN chown ${uid}:${gid} -R /home/developer/workspace
 USER developer
 ENV HOME /home/developer
 
-CMD ./eclipse/eclipse

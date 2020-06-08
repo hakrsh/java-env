@@ -13,3 +13,9 @@ services:
             - ./jenkins_home:/root/.jenkins
         depends_on: 
             - java-env
+    eclipse:
+        build: ./eclipse
+        image: eclipse
+        command: echo run ./eclipse/start_eclipse.sh to run eclipse
+        depends_on: 
+            - java-env
