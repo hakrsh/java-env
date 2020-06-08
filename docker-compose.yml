@@ -1,0 +1,23 @@
+version: '3'
+services: 
+    java-env:
+        build: .
+        image: java/env
+        command: echo env running
+    eclipse:
+        build: ./eclipse
+        image: eclipse
+        environment: 
+            - DISPLAY  
+        volumes: 
+            - /tmp/.X11-unix:/tmp/.X11-unix 
+        depends_on: java-env
+    tomcat:
+        build: ./tomcat
+        image: tomcat
+        ports: 
+            - 5000:8080
+        volumes: 
+            ./tomcat/webapps:/root/tomcat/webapps
+            ./jenkins_home:/root/.jenkins
+        depends_on: java-env
