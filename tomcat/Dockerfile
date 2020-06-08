@@ -8,4 +8,5 @@ RUN wget http://mirror.serverion.com/jenkins/war/2.239/jenkins.war && mv jenkins
 COPY context.xml ./tomcat/webapps/manager/META-INF/context.xml
 COPY tomcat-users.xml ./tomcat/conf/tomcat-users.xml
 
+EXPOSE 8080 80
 CMD ["./tomcat/bin/catalina.sh","run"]
