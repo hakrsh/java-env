@@ -4,19 +4,20 @@ services:
         build: .
         image: java/env
         command: echo env running!
-    tomcat:
-        build: ./tomcat
-        image: tomcat
-        container_name: tomcat
-        ports: 
-            - 5000:8080
-        volumes: 
-            - ./jenkins_home:/root/.jenkins
-        depends_on: 
-            - java-env
     eclipse:
         build: ./eclipse
         image: eclipse
         command: echo run ./eclipse/start_eclipse.sh to run eclipse
         depends_on: 
             - java-env
+    tomcat:
+        build: ./tomcat
+        image: tomcat
+        container_name: tomcat
+        ports: 
+            - 80:8080
+        volumes: 
+            - ./jenkins_home:/root/.jenkins
+        depends_on: 
+            - java-env
+
