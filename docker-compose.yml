@@ -10,6 +10,12 @@ services:
         command: echo run ./eclipse/start_eclipse.sh to run eclipse
         depends_on: 
             - java-env
+    netbeans:
+        build: ./netbeans
+        image: netbeans
+        command: echo run ./netbeans/start_netbeans.sh to run netbeans
+        depends_on: 
+            - java-env
     tomcat:
         build: ./tomcat
         image: tomcat

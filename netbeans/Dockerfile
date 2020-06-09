@@ -1,6 +1,7 @@
 FROM java/env
 
-RUN curl -SL -# http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/oxygen/2/eclipse-jee-oxygen-2-linux-gtk-x86_64.tar.gz | tar -xz
+RUN curl -o netbeans.zip -# -SL https://mirrors.estointernet.in/apache/incubator/netbeans/incubating-netbeans/incubating-11.0/incubating-netbeans-11.0-bin.zip  && \
+	unzip netbeans.zip && rm netbeans.zip
 
 RUN export uid=1000 gid=1000 && \
 	mkdir -p /home/developer/workspace && \
