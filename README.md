@@ -1,4 +1,4 @@
-# Virtual Java Devlopment Environment
+# Virtual Java Development Environment
 
 ## Dependencies for Running Locally
 * docker
@@ -11,7 +11,5 @@
 1. Clone this repo.
 2. cd java-env
 3. docker-compose up -d`
-4. Run `./eclipse/start_eclipse.sh` to run Eclipse IDE.
-5. Run `./netbeans/start_netbeans.sh` to run Netbeans IDE.
-
-
+4. Run `./eclipse/start_eclipse.sh` to start Eclipse IDE.`
+5. Run `./netbeans/start_netbeans.sh` to start Netbeans IDE.
