@@ -1,9 +1,11 @@
 FROM ubuntu:latest
+ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get -q update && apt-get -q install -y \
+RUN apt-get -q update && apt-get -qy install \
     default-jdk \
     && rm -rf /var/lib/apt/lists/*
-RUN apt-get -q update && apt-get -q install -y \
+RUN apt-get -q update && apt-get -qy install \
+    libxext6 \
     build-essential\
     wget \
     unzip \
