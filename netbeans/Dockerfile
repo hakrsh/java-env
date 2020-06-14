@@ -1,6 +1,6 @@
 FROM java/env
 
-RUN curl -o netbeans.zip -# -SL https://mirrors.estointernet.in/apache/incubator/netbeans/incubating-netbeans/incubating-11.0/incubating-netbeans-11.0-bin.zip  && \
+RUN curl -o netbeans.zip -# -SL https://downloads.apache.org/netbeans/netbeans/12.0/netbeans-12.0-bin.zip  && \
 	unzip netbeans.zip && rm netbeans.zip
 
 RUN export uid=1000 gid=1000 && \
