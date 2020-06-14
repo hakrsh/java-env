@@ -3,10 +3,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get -q update && apt-get -qy install \
     default-jdk \
-    && rm -rf /var/lib/apt/lists/*
-RUN apt-get -q update && apt-get -qy install \
     libxext6 \
     build-essential\
+    bash-completion \
     wget \
     unzip \
     vim \
